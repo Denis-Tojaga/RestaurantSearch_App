@@ -1,24 +1,33 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import {createAppContainer} from "react-navigation";
+import { createAppContainer } from "react-navigation";
 import {createStackNavigator} from "react-navigation-stack";
+//stackNavigator je property koji ce automatski prikazati razlicite ekrane,takodjer prikazuje automatski header na vrhu svakog screena
+import SearchScreen from "./src/screens/SearchScreen";
+
+//u funkciju createStackNavigator proslijedjujemo dva objekta 
 
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+//dajemo proizvoljna imena pozeljno je da uzmemo prvu rijec bez Screen
+//ako imamo vise ekrana onda nam treba drugi initialRouteName za prikaz prvog ekrana
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+//defaultNavigationOptions su opcije koje ce se koristiti za svaki drugi screen,ovaj objekat mozemo koristiti da bi podesili header na vrhu svakog ekrana
+
+
+const navigator = createStackNavigator(
+  {
+    Search: SearchScreen
+
   },
-});
+  {
+    initialRouteName: "Search",
+    defaultNavigationOptions: {
+      title: "Restaurant Search"
+    }
+  });
+
+
+
+
+//App.js je poseban file ciji export ce react-native uzeti i pokrenuti automatski na pocetku aplikacije (default App Component)
+//vracamo funckiju kojoj proslijedjujemo prethodno napravljeni StackNavigator
+
+export default createAppContainer(navigator)
