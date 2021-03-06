@@ -18,9 +18,9 @@ import { TextInput } from "react-native-gesture-handler";
 const SearchBar = ()=>{
 
     return (
-        <View style = {styles.background}>
+        <View style = {styles.backgroundStyle}>
 
-            <Feather name = "search" size = {35} color={"black"}/>
+            <Feather name = "search" style={styles.iconStyle}/>
             <TextInput style = {styles.searchText} placeholder="Search for restaurants"></TextInput>
 
         </View>
@@ -34,21 +34,27 @@ const SearchBar = ()=>{
 
 const styles = StyleSheet.create({
 
-    background:{
+    backgroundStyle:{
         backgroundColor:"lightgray",
-        height:50.5,
         marginHorizontal:15,        
-        borderRadius:5,
         marginVertical:15,
-        flexDirection:"row",
-        padding:5
+        borderRadius:5,
+        padding:2,
+        height:50.5,
+        flexDirection:"row"
+    },
+
+
+    iconStyle:{
+        color:"black",
+        fontSize:39,
+        alignSelf:"center",
+        marginHorizontal:10       
     },
 
     searchText:{
-        position:"absolute",
-        alignSelf:"center",
-        marginLeft:55,
-        fontSize:22
+        flex:1,
+        fontSize:21
     }
 
 });
