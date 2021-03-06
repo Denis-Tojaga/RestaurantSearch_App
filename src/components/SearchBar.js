@@ -14,12 +14,19 @@ import { Feather } from "@expo/vector-icons";
 //We show it exactly like a custom component <Feather />
 //For icon styling we can make a styling object or assign a prop directly to it ( size and color )
 
-const SearchBar = ({ term, onTermChange }) => {
+const SearchBar = ({ term, onTermChange, onSearch }) => {
 
 
 
     //the value by default will be the term we got as a first argument and on changing text we call a function "onChangeTerm"
     //that function need some new text in order to set the new term so we send that as well as an argument
+
+
+
+    //new property onEndEditing se zove nakon pritiskanja enter ili potvrde na tastaturi(tada zelimo obaviti search)
+    //ako zelimo poslati referencu funkcije koja se poziva samo navedemo naziv bez parametara i zagrada i ta ce se funckcija uvijek pozivati na taj dogadjaj
+    //poziva originalnu funckiju iz SearchScreen koja tamo prima parametar, ovdje ne moramo nista proslijedjivati samo navedemo njen naziv
+
 
 
     return (
@@ -31,11 +38,10 @@ const SearchBar = ({ term, onTermChange }) => {
                 style={styles.searchText}
                 placeholder="Search for restaurants"
                 value={term}
-                autoCorrect = {false}
-                autoCapitalize = "sentences"
-                onChangeText={(newValue) => {
-                    onTermChange(newValue)
-                }}
+                autoCorrect={false}
+                autoCapitalize="none"
+                onChangeText={onTermChange}
+                onEndEditing={onSearch}
 
             ></TextInput>
 
