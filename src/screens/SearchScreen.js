@@ -1,12 +1,12 @@
-import React,{useState} from "react";
-import {View,Text,StyleSheet} from "react-native";
+import React, { useState } from "react";
+import { View, Text, StyleSheet } from "react-native";
 import SearchBar from "../components/SearchBar";
 
 
-const SearchScreen = ()=>{
+const SearchScreen = () => {
 
     //term will be the value we are searching for in a searchBar component
-    const [term,setTerm] = useState("");
+    const [term, setTerm] = useState("");
 
 
     //passing two props to a searchBar component
@@ -15,8 +15,15 @@ const SearchScreen = ()=>{
 
     return (
         <View>
-            <SearchBar term = {term} onTermChange = {(newTerm)=>{setTerm(newTerm)}} />
+            
+            <SearchBar
+                term={term}
+                onTermChange={(newTerm) => { setTerm(newTerm) }}
+                onSearch={() => { console.log("Term was submited!") }}
+            />
             <Text>Search Screen</Text>
+            <Text>{term}</Text>
+
         </View>
     );
 }
