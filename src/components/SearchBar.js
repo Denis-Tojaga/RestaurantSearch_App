@@ -14,7 +14,7 @@ import { Feather } from "@expo/vector-icons";
 //We show it exactly like a custom component <Feather />
 //For icon styling we can make a styling object or assign a prop directly to it ( size and color )
 
-const SearchBar = ({ term, onTermChange, onSearch }) => {
+const SearchBar = ({ searchInput, onInputChange, onSearch }) => {
 
 
 
@@ -37,10 +37,10 @@ const SearchBar = ({ term, onTermChange, onSearch }) => {
             <TextInput
                 style={styles.searchText}
                 placeholder="Search for restaurants"
-                value={term}
+                value={searchInput}
                 autoCorrect={false}
                 autoCapitalize="none"
-                onChangeText={onTermChange}
+                onChangeText={onInputChange}
                 onEndEditing={onSearch}
 
             ></TextInput>
