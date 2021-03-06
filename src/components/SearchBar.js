@@ -12,13 +12,15 @@ import { TextInput } from "react-native-gesture-handler";
 
 
 //Adding icons is easier because we already have vector-icons
+//We show it exactly like a custom component <Feather />
+//For icon styling we can make a styling object or assign a prop directly to it ( size and color )
 
 const SearchBar = ()=>{
 
     return (
         <View style = {styles.background}>
 
-            <Feather name = "search" size = {39} color={"black"}/>
+            <Feather name = "search" size = {35} color={"black"}/>
             <TextInput style = {styles.searchText} placeholder="Search for restaurants"></TextInput>
 
         </View>
@@ -37,11 +39,10 @@ const styles = StyleSheet.create({
         height:50.5,
         marginHorizontal:15,        
         borderRadius:5,
-        marginVertical:10,
+        marginVertical:15,
         flexDirection:"row",
         padding:5
     },
-
 
     searchText:{
         position:"absolute",
