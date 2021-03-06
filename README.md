@@ -1,1 +1,1 @@
-# Restaurant Application
+# Restaurant Search Application
