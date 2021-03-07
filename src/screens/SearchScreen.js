@@ -79,7 +79,7 @@ const SearchScreen = () => {
 
             {errorMessage.length != 0 ? <Text>{errorMessage}</Text> : null}
 
-            <Text>We have found {restaurants.length}</Text>
+
 
             <ResultList
                 headerText={"Cost Effective"}
@@ -92,6 +92,9 @@ const SearchScreen = () => {
                 headerText={"Big spender"}
                 restaurantsList={filterRestaurantsByPrice("$$$")}
             />
+
+
+
 
         </View>
     );
