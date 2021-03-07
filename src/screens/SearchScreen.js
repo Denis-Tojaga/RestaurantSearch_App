@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { View, Text, StyleSheet } from "react-native";
 import SearchBar from "../components/SearchBar";
 //importujemo yelp file iz API foldera
@@ -43,20 +43,25 @@ const SearchScreen = () => {
 
 
 
+    //da bi se defaultno izvrsilo neko pretrazivanje cim pokrenemo aplikciju ova helper funckija ce primati searchArgument 
+    const searchAPI = async (searchTerm) => {
 
-    const searchAPI = async () => {
+        console.log("Hi,There!");
 
         try {
+
             var APIresponse = await yelp.get("/search", {
                 params: {
                     limit: 50,
-                    term: searchInput,
+                    term: searchTerm,
                     location: "San Jose"
                 }
             });
 
             //nama iz tog objekta treba samo objekat businesses 
             setRestaurants(APIresponse.data.businesses);
+
+
 
         } catch (err) {
             setErrorMessage("Something went wrong!")
@@ -65,6 +70,20 @@ const SearchScreen = () => {
     };
 
 
+
+
+
+    //Call searchAPI when component is first rendered
+    //ako ovo ostavimo bit ce infinite loop jer svaki put u funkciji pozivamo setter i komponenta se rerenderuje
+    // *NE RADITI 
+    //umjesto ovoga koristimo useEffect da se pozove samo jednom
+    //searchAPI("pasta");
+
+
+
+    useEffect(() => {
+        searchAPI("pasta");
+    }, []);
 
 
 
@@ -79,7 +98,7 @@ const SearchScreen = () => {
                 //svaki put kad se promijeni input da se postavi na novu vrijednost
                 onInputChange={(newInput) => setSearchInput(newInput)}
                 //svaki put na pretrazivanje pozivamo asinhronu helper funkciju
-                onSearch={() => searchAPI()}
+                onSearch={() => searchAPI(searchInput)}
             />
 
 
