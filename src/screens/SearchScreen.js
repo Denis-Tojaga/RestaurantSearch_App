@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, StyleSheet } from "react-native";
 import SearchBar from "../components/SearchBar";
-//importujemo yelp file iz API foldera
-import yelp from "../api/yelp";
+//importujemo hook koju smo kreirali
+import useRestaurants from "../hooks/useRestaurants";
 
 
 
@@ -32,59 +32,11 @@ const SearchScreen = () => {
     //pravimo state koji ce se brinuti o onome sto dobijemo za API linka, defaultno postavljamo na prazan niz
     //ovdje ce se spremiti svi restorani koje nam API vrati
     //restaurants je niz objekata koje dobijemo od requesta
-    const [restaurants, setRestaurants] = useState([]);
+    
+    
 
-
-
-    //ukoliko dodje do errora onda moramo updateovati screen da se prikaze errorMessage
-    const [errorMessage, setErrorMessage] = useState("");
-
-
-
-
-
-    //da bi se defaultno izvrsilo neko pretrazivanje cim pokrenemo aplikciju ova helper funckija ce primati searchArgument 
-    const searchAPI = async (searchTerm) => {
-
-        console.log("Hi,There!");
-
-        try {
-
-            var APIresponse = await yelp.get("/search", {
-                params: {
-                    limit: 50,
-                    term: searchTerm,
-                    location: "San Jose"
-                }
-            });
-
-            //nama iz tog objekta treba samo objekat businesses 
-            setRestaurants(APIresponse.data.businesses);
-
-
-
-        } catch (err) {
-            setErrorMessage("Something went wrong!")
-        }
-
-    };
-
-
-
-
-
-    //Call searchAPI when component is first rendered
-    //ako ovo ostavimo bit ce infinite loop jer svaki put u funkciji pozivamo setter i komponenta se rerenderuje
-    // *NE RADITI 
-    //umjesto ovoga koristimo useEffect da se pozove samo jednom
-    //searchAPI("pasta");
-
-
-
-    useEffect(() => {
-        searchAPI("pasta");
-    }, []);
-
+    //file useRestaurants exportuje funkciju koja vraca niz od tri objekta koja cemo spremiti ovdje
+    const[searchAPI,restaurants,errorMessage] = useRestaurants();
 
 
 
