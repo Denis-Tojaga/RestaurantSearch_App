@@ -20,6 +20,8 @@ const ResultList = ({ headerText, restaurantsList }) => {
 
                 horizontal={true}
 
+                scrollEnabled = {false}
+
                 data={restaurantsList}
 
                 //every object from api has its own id so we use that as the key 
@@ -46,8 +48,7 @@ const ResultList = ({ headerText, restaurantsList }) => {
 const styles = StyleSheet.create({
     titleStyle: {
         fontSize: 25,
-        fontWeight: "bold",
-        fontFamily:"NexaDemo-Bold"
+        fontWeight: "bold"
     }
 });
 
