@@ -1,7 +1,7 @@
 import React from "react";
 import { View, StyleSheet, TextInput } from "react-native";
-import { AntDesign } from '@expo/vector-icons';
 //import { Feather } from "@expo/vector-icons";
+import {Ionicons} from "@expo/vector-icons";
 
 //name of the icon from the whole directory like a component
 
@@ -33,7 +33,6 @@ const SearchBar = ({ searchInput, onInputChange, onSearch }) => {
     return (
         <View style={styles.backgroundStyle}>
 
-            <AntDesign name="search1" size={24} color="black" />
 
             <TextInput
                 style={styles.searchText}
@@ -77,7 +76,8 @@ const styles = StyleSheet.create({
 
     searchText: {
         flex: 1,
-        fontSize: 18
+        fontSize: 18,
+        marginLeft:20
     }
 
 });

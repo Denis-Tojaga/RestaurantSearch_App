@@ -1,6 +1,8 @@
 import React from "react";
 import { View, Text, StyleSheet, FlatList } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
+import FoodCard from "./FoodCard";
+
 
 
 
@@ -20,7 +22,7 @@ const ResultList = ({ headerText, restaurantsList }) => {
 
                 horizontal={true}
 
-                scrollEnabled = {false}
+                showsHorizontalScrollIndicator = {false}
 
                 data={restaurantsList}
 
@@ -30,7 +32,7 @@ const ResultList = ({ headerText, restaurantsList }) => {
                 //it accepts whole object with item and key, we just want item
                 renderItem={({ item }) => {
 
-                    return numberOfRestaurantsFound != 0 ? <Text>{item.name} </Text> : <Text>No restaurants found!</Text>
+                    return <FoodCard result = {item} />
                 }}
             />
                 : <Text>No restaurants found</Text>}
