@@ -30,4 +30,6 @@ const navigator = createStackNavigator(
 //App.js je poseban file ciji export ce react-native uzeti i pokrenuti automatski na pocetku aplikacije (default App Component)
 //vracamo funckiju kojoj proslijedjujemo prethodno napravljeni StackNavigator
 
+
+
 export default createAppContainer(navigator)

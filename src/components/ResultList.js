@@ -46,7 +46,8 @@ const ResultList = ({ headerText, restaurantsList }) => {
 const styles = StyleSheet.create({
     titleStyle: {
         fontSize: 25,
-        fontWeight: "bold"
+        fontWeight: "bold",
+        fontFamily:"NexaDemo-Bold"
     }
 });
 
