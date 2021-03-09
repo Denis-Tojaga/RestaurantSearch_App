@@ -7,8 +7,8 @@ import { View, StyleSheet, Text, Image } from "react-native";
 
 const openedHelper= (closed)=>{
 
-    return closed ? <Text style= {{color:"red",textAlign:"left",fontSize:10}}>Closed!</Text>
-     : <Text style = {{color:"green",fontSize:12,textAlign:"left"}}>Opened</Text>
+    return closed ? <Text style= {{color:"red",textAlign:"center",fontSize:10}}>Closed!</Text>
+     : <Text style = {{color:"green",fontSize:12,textAlign:"center"}}>Opened</Text>
 
 }
 
@@ -22,7 +22,6 @@ const FoodCard = ({ result }) => {
             <Image style={styles.imageStyle} source={{ uri: result.image_url }} />
             <Text style={styles.nameStyle}>{result.name}</Text>
             <Text style = {styles.descStyle}>{result.rating} Stars, {result.review_count} Reviews</Text>
-            <Text style = {styles.contactInfo}>{result.phone}</Text>
             {openedHelper(result.is_closed)}
         </View>
     );

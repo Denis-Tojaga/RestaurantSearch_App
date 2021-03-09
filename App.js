@@ -2,6 +2,7 @@ import { createAppContainer } from "react-navigation";
 import {createStackNavigator} from "react-navigation-stack";
 //stackNavigator je property koji ce automatski prikazati razlicite ekrane,takodjer prikazuje automatski header na vrhu svakog screena
 import SearchScreen from "./src/screens/SearchScreen";
+import ResultShowScreen from "./src/screens/ResultShowScreen";
 
 //u funkciju createStackNavigator proslijedjujemo dva objekta 
 
@@ -14,8 +15,8 @@ import SearchScreen from "./src/screens/SearchScreen";
 
 const navigator = createStackNavigator(
   {
-    Search: SearchScreen
-
+    Search: SearchScreen,
+    ResultScreen : ResultShowScreen
   },
   {
     initialRouteName: "Search",
