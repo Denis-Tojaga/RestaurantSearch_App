@@ -78,7 +78,7 @@ const SearchScreen = () => {
             />
 
 
-            {errorMessage.length != 0 ? <Text>{errorMessage}</Text> : null}
+            {errorMessage.length != 0 ? <Text style={{ alignSelf: "center", fontSize: 15, color: "red" }}>{errorMessage}</Text> : null}
 
 
             <ScrollView>
@@ -93,6 +93,11 @@ const SearchScreen = () => {
                 <ResultList
                     headerText={"Big spender"}
                     restaurantsList={filterRestaurantsByPrice("$$$")}
+                />
+
+                <ResultList
+                    headerText={"Luxury"}
+                    restaurantsList={filterRestaurantsByPrice("$$$$")}
                 />
 
             </ScrollView>

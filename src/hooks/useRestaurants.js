@@ -25,7 +25,7 @@ export default () => {
                 params: {
                     limit: 50,
                     term: searchTerm,
-                    location: "San Jose"
+                    location: "San Francisco"
                 }
             });
 

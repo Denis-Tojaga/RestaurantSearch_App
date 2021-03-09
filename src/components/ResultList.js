@@ -36,7 +36,7 @@ const ResultList = ({ headerText, restaurantsList }) => {
                     return <FoodCard result = {item} />
                 }}
             />
-                : <Text>No restaurants found</Text>}
+                : <Text style = {styles.errorStyle}>No restaurants found for this category!</Text>}
 
 
 
@@ -63,6 +63,13 @@ const styles = StyleSheet.create({
 
     container:{
         marginBottom:10
+    },
+
+    errorStyle:{
+        color:"darkred",
+        fontSize:15,
+        fontStyle:"italic",
+        alignSelf:"center"
     }
 });
 
