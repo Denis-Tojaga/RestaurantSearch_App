@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Text, StyleSheet, View } from "react-native";
+import { Text, StyleSheet, View, FlatList, Image } from "react-native";
 import ResultList from "../components/ResultList";
 import yelp from "../api/yelp";
 
@@ -43,16 +43,49 @@ const ResultShowScreen = ({ navigation }) => {
 
 
     return (
-        <View>
+        <>
             <Text>{result.name}</Text>
-        </View>
+            <FlatList
+
+                showsVerticalScrollIndicator={false}
+
+                style = {styles.listStyle}
+                //our data will be the array of photos
+                data={result.photos}
+
+                //key will be the url of the photo
+                keyExtractor={(photo) => photo}
+
+                //with every item we will show an image 
+                renderItem={({ item }) => {
+
+                    return (
+                        <Image style = {styles.imageStyle} source={{ uri: item }} />
+                    )
+
+                }}
+
+            />
+
+        </>
     );
 
 };
 
 
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+
+    imageStyle:{
+        width:350,
+        height:200,
+        marginVertical:15,
+        borderRadius:4,
+        alignSelf:"center"
+    }
+
+
+});
 
 
 export default ResultShowScreen;
