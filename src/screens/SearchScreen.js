@@ -21,7 +21,7 @@ import ResultList from "../components/ResultList";
 
 //if we want to navigate from child to some new screen we need to intercept the navigation object out default screen is getting
 
-const SearchScreen = ({navigation}) => {
+const SearchScreen = () => {
 
 
     //searchInput will be the value we are searching for in a searchBar component
@@ -87,23 +87,19 @@ const SearchScreen = ({navigation}) => {
                 <ResultList
                     headerText={"Cost Effective"}
                     restaurantsList={filterRestaurantsByPrice("$")}
-                    navigation = {navigation}
-                    />
+                />
                 <ResultList
                     headerText={"Bit Pricier"}
                     restaurantsList={filterRestaurantsByPrice("$$")}
-                    navigation = {navigation}
                 />
                 <ResultList
                     headerText={"Big spender"}
                     restaurantsList={filterRestaurantsByPrice("$$$")}
-                    navigation = {navigation}
                 />
 
                 <ResultList
                     headerText={"Luxury"}
                     restaurantsList={filterRestaurantsByPrice("$$$$")}
-                    navigation = {navigation}
                 />
 
             </ScrollView>

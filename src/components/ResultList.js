@@ -2,6 +2,9 @@ import React from "react";
 import { View, Text, StyleSheet, FlatList, TouchableOpacity } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
 import FoodCard from "./FoodCard";
+//this import will give back to us a new version of the component  that has an access to a navigation object from 
+//react stack navigation
+import { withNavigation } from "react-navigation";
 
 
 
@@ -39,8 +42,11 @@ const ResultList = ({ headerText, restaurantsList, navigation }) => {
 
                     //we are returning touchable opacity wrapped around the FoodCard component
                     //everytime a user clicks on the whole card it navigates to a new screen
+
+                    //if we need to pass additional info about the item, we do that with navigate function
+                    //just by adding a new object as a prop (we make object with { })
                     return (
-                        <TouchableOpacity onPress={() => { navigation.navigate("ResultScreen") }}>
+                        <TouchableOpacity onPress={() => { navigation.navigate("ResultScreen", { id: item.id }) }}>
                             <FoodCard result={item} />
                         </TouchableOpacity>
                     )
@@ -88,4 +94,7 @@ const styles = StyleSheet.create({
 
 
 
-export default ResultList;
+//to use withNavigation prop we must export it like it
+//the function is accepting a component
+//this allows the component to recieve the navigation prop without having it handled through parent component
+export default withNavigation(ResultList);
