@@ -49,8 +49,9 @@ const ResultList = ({ headerText, restaurantsList }) => {
 
 const styles = StyleSheet.create({
     titleStyle: {
-        fontSize: 25,
-        fontWeight: "bold"
+        fontSize: 28,
+        fontWeight: "bold",
+        alignSelf:"center"
     }
 });
 
