@@ -56,8 +56,9 @@ const styles = StyleSheet.create({
 
     backgroundStyle: {
         backgroundColor: "lightgray",
-        marginHorizontal: 15,
-        marginVertical: 15,
+        marginHorizontal: 12,
+        marginTop:15,
+        marginBottom:10,
         borderRadius: 5,
         padding: 2,
         height: 50.5,

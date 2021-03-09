@@ -10,7 +10,7 @@ const FoodCard = ({ result }) => {
         <View style = {styles.container}>
             <Image style={styles.imageStyle} source={{ uri: result.image_url }} />
             <Text style={styles.nameStyle}>{result.name}</Text>
-            <Text>{result.rating} Stars, {result.review_count} Reviews</Text>
+            <Text style = {styles.descStyle}>{result.rating} Stars, {result.review_count} Reviews</Text>
         </View>
     );
 };
@@ -26,19 +26,25 @@ const FoodCard = ({ result }) => {
 const styles = StyleSheet.create({
 
     container:{
+        marginTop:15,
         marginLeft:15,
-        marginTop:10
     },
 
     imageStyle: {
         width: 250,
-        height: 100,
-        borderRadius: 4
+        height: 140,
+        borderRadius: 4,
+        marginBottom:5
     },
 
     nameStyle: {
         fontWeight: "bold",
         fontSize: 16
+    },
+
+    descStyle:{
+        color:"gray",
+        fontStyle:"italic"
     }
 
 });

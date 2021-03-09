@@ -108,7 +108,6 @@ const SearchScreen = () => {
 
 
 const styles = StyleSheet.create({
-
 });
 
 

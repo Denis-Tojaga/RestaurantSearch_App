@@ -14,9 +14,10 @@ const ResultList = ({ headerText, restaurantsList }) => {
 
 
     return (
-        <View>
+        <View style = {styles.container}>
 
             <Text style={styles.titleStyle}>{headerText}</Text>
+            <Text style = {styles.lineStyle}>________________________________________________</Text>
 
             {numberOfRestaurantsFound != 0 ? <FlatList
 
@@ -49,9 +50,19 @@ const ResultList = ({ headerText, restaurantsList }) => {
 
 const styles = StyleSheet.create({
     titleStyle: {
-        fontSize: 28,
+        fontSize: 25,
+        color:"black",
         fontWeight: "bold",
-        alignSelf:"center"
+        alignSelf:"center",
+    },
+
+    lineStyle:{
+        alignSelf:"center",
+        color:"darkgray"
+    },
+
+    container:{
+        marginBottom:10
     }
 });
 
