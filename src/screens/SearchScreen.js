@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet } from "react-native";
+//If we want to scroll through some content we wrap it up with scrollview JSX element
+import { View, Text, StyleSheet, ScrollView } from "react-native";
 import SearchBar from "../components/SearchBar";
 //importujemo hook koju smo kreirali
 import useRestaurants from "../hooks/useRestaurants";
@@ -65,7 +66,7 @@ const SearchScreen = () => {
 
     return (
 
-        <View>
+        <>
 
             <SearchBar
                 //postavlja searchInput
@@ -80,23 +81,24 @@ const SearchScreen = () => {
             {errorMessage.length != 0 ? <Text>{errorMessage}</Text> : null}
 
 
+            <ScrollView>
 
-            <ResultList
-                headerText={"Cost Effective"}
-                restaurantsList={filterRestaurantsByPrice("$")} />
-            <ResultList
-                headerText={"Bit Pricier"}
-                restaurantsList={filterRestaurantsByPrice("$$")}
-            />
-            <ResultList
-                headerText={"Big spender"}
-                restaurantsList={filterRestaurantsByPrice("$$$")}
-            />
+                <ResultList
+                    headerText={"Cost Effective"}
+                    restaurantsList={filterRestaurantsByPrice("$")} />
+                <ResultList
+                    headerText={"Bit Pricier"}
+                    restaurantsList={filterRestaurantsByPrice("$$")}
+                />
+                <ResultList
+                    headerText={"Big spender"}
+                    restaurantsList={filterRestaurantsByPrice("$$$")}
+                />
+
+            </ScrollView>
 
 
-
-
-        </View>
+        </>
     );
 }
 
@@ -106,8 +108,17 @@ const SearchScreen = () => {
 
 
 
+//ako ne zelimo da vracamo sve unutar view elementa zbog fit in namjera view elementa , mozemo koristiti prazan tag
+// <>  </>
+
 
 const styles = StyleSheet.create({
+
+    //ako zelimo da view element uzima samo onoliko koliko je visible od ekrana onda dodajemo flex:1
+    parentView: {
+        flex: 1
+    }
+
 });
 
 
