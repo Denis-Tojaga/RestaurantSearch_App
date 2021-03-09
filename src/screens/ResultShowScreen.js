@@ -5,6 +5,13 @@ import ResultList from "../components/ResultList";
 
 const ResultShowScreen = ()=>{
 
+    return (
+        <View>
+            <Text>Results Show</Text>
+        </View>
+    );
+
+
 };
 
 
