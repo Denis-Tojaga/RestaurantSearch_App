@@ -22,6 +22,13 @@ Clicking on the food image it show a detailed view of that restaurant
 ### Android 
 <br>
 
+![](AppImages/image1.png)
+![](AppImages/image2.png)
+![](AppImages/image3.png)
+![](AppImages/image4.png)
+![](AppImages/image5.png)
+
+
 
 ### iOS
 <br>
