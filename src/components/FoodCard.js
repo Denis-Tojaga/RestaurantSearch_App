@@ -7,8 +7,8 @@ import { View, StyleSheet, Text, Image } from "react-native";
 
 const openedHelper= (closed)=>{
 
-    return closed ? <Text style= {{color:"red",textAlign:"center",fontSize:10}}>Closed!</Text>
-     : <Text style = {{color:"green",fontSize:12,textAlign:"center"}}>Opened</Text>
+    return closed ? <Text style= {{color:"red",textAlign:"center",fontSize:10}}>Currently Closed!</Text>
+     : <Text style = {{color:"green",fontSize:12,textAlign:"center"}}>Currently Opened</Text>
 
 }
 
@@ -68,8 +68,6 @@ const styles = StyleSheet.create({
         color:"gray",
         fontSize:12
     }
-
-
 
 });
 

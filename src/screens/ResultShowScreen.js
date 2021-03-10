@@ -44,12 +44,19 @@ const ResultShowScreen = ({ navigation }) => {
 
     return (
         <>
-            <Text>{result.name}</Text>
+            <Text style={styles.headerStyle}>{result.name}</Text>
+
+            <View style={styles.detailContainerStyle}>
+                <Text style={styles.detailStyle}>Owner contact:  {result.phone}</Text>
+                <Text style={styles.detailStyle}>Delivery number:  {result.display_phone}</Text>
+                <Text style={styles.detailStyle}>________________________________________________</Text>
+            </View>
+
             <FlatList
 
                 showsVerticalScrollIndicator={false}
 
-                style = {styles.listStyle}
+                style={styles.listStyle}
                 //our data will be the array of photos
                 data={result.photos}
 
@@ -60,7 +67,7 @@ const ResultShowScreen = ({ navigation }) => {
                 renderItem={({ item }) => {
 
                     return (
-                        <Image style = {styles.imageStyle} source={{ uri: item }} />
+                        <Image style={styles.imageStyle} source={{ uri: item }} />
                     )
 
                 }}
@@ -76,12 +83,33 @@ const ResultShowScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
 
-    imageStyle:{
-        width:350,
-        height:200,
-        marginVertical:15,
-        borderRadius:4,
-        alignSelf:"center"
+    imageStyle: {
+        width: 350,
+        height: 200,
+        marginVertical: 8,
+        borderRadius: 4,
+        alignSelf: "center"
+    },
+
+    headerStyle: {
+        textAlign: "center",
+        fontWeight: "700",
+        fontSize: 28,
+        marginTop:10
+    },
+
+    detailStyle: {
+        textAlign: "left",
+        fontSize: 18,
+        fontWeight: "300",
+        color: "gray",
+        fontStyle: "italic",
+    },
+
+
+    detailContainerStyle: {
+        marginLeft: 10,
+        marginVertical: 20
     }
 
 
