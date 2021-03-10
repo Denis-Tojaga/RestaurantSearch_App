@@ -31,7 +31,7 @@ Clicking on the food image it show a detailed view of that restaurant
 ### iOS
 <br>
 
-<img src="AppImages/slika1.png" width="300" height="500">  |  <img src="AppImages/slika2.png" width="300" height="500">
-<img src="AppImages/slika3.png" width="300" height="500">  |  <img src="AppImages/slika4.png" width="300" height="500"> 
-<img src="AppImages/slika5.png" width="300" height="500">
+<img src="AppImages/slika1.jpg" width="300" height="500">  |  <img src="AppImages/slika2.jpg" width="300" height="500">
+<img src="AppImages/slika3.jpg" width="300" height="500">  |  <img src="AppImages/slika4.jpg" width="300" height="500"> 
+<img src="AppImages/slika5.jpg" width="300" height="500">
 
