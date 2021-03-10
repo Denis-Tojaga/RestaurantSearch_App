@@ -22,7 +22,7 @@ Clicking on the food image it show a detailed view of that restaurant
 ### Android 
 <br>
 
-![](AppImages/image1.png =250x250)
+<img src="AppImages/image1.png" width="100" height="100">
 ![](AppImages/image2.png =250x250)
 ![](AppImages/image3.png =250x250)
 ![](AppImages/image4.png =250x250)
