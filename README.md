@@ -16,12 +16,12 @@ Clicking on the food image it show a detailed view of that restaurant
 
 
 
-### App interface
+## App interface
 <br>
-#### Android 
+### Android 
 <br>
 
 
-#### iOS
+### iOS
 <br>
 
