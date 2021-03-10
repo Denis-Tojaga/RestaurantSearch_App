@@ -82,7 +82,7 @@ const SearchScreen = () => {
             {errorMessage.length != 0 ? <Text style={{ alignSelf: "center", fontSize: 15, color: "red" }}>{errorMessage}</Text> : null}
 
 
-            <ScrollView>
+            <ScrollView showsVerticalScrollIndicator={false}>
 
                 <ResultList
                     headerText={"Cost Effective"}
@@ -125,7 +125,6 @@ const styles = StyleSheet.create({
     parentView: {
         flex: 1
     }
-
 });
 
 
