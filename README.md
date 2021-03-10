@@ -18,6 +18,7 @@ Clicking on the food image it show a detailed view of that restaurant
 
 ## App interface
 <br>
+
 ### Android 
 <br>
 
