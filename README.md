@@ -22,14 +22,8 @@ Clicking on the food image it show a detailed view of that restaurant
 ### Android 
 <br>
 
-                                                           |  
-:---------------------------------------------------------:|:----------------------------------------------------------:
-<img src="AppImages/image1.png" width="300" height="500">  |  <img src="AppImages/image2.png" width="300" height="500">)
-
-<img src="AppImages/image1.png" width="300" height="500">
-<img src="AppImages/image2.png" width="300" height="500">
-<img src="AppImages/image3.png" width="300" height="500">
-<img src="AppImages/image4.png" width="300" height="500">
+<img src="AppImages/image1.png" width="300" height="500">  |  <img src="AppImages/image2.png" width="300" height="500">
+<img src="AppImages/image4.png" width="300" height="500">  |  <img src="AppImages/image3.png" width="300" height="500"> 
 <img src="AppImages/image5.png" width="300" height="500">
 
 
