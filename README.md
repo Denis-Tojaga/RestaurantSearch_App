@@ -8,27 +8,29 @@ The app then communicates with an API and gives back the information about all r
 <br>
 Clicking on the food image it show a detailed view of that restaurant
 <br>
--owner's number 
+- owner's number 
 <br>
--delivery number
+- delivery number
 <br>
--more images about certain term
+- more images about certain term
 
 
 
 ## App interface
 <br>
 
-### Android 
+# Android 
 <br>
 
-<img src="AppImages/image1.png" width="300" height="500">    <img src="AppImages/image2.png" width="300" height="500">
-<img src="AppImages/image4.png" width="300" height="500">    <img src="AppImages/image3.png" width="300" height="500"> 
+<img src="AppImages/image1.png" width="300" height="500">  
+<img src="AppImages/image2.png" width="300" height="500">
+<img src="AppImages/image3.png" width="300" height="500"> 
+<img src="AppImages/image4.png" width="300" height="500">    
 <img src="AppImages/image5.png" width="300" height="500">
 
 
 
-### iOS
+# iOS
 <br>
 
 <img src="AppImages/slika1.jpg" width="300" height="500">   <img src="AppImages/slika2.jpg" width="300" height="500">
