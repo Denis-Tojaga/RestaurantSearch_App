@@ -3,8 +3,6 @@
 
 ### App startup
 
-<br />
-
 #### 1) download the repo from github 
 #### 2) go inside that directory in terminal 
 #### 3) run "npm start" 
