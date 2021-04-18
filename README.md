@@ -23,9 +23,10 @@ Clicking on the food image it show a detailed view of that restaurant
 - delivery number
 - more images about certain term
 
+<br />
 
 
-## App interface
+### App interface
 <br>
 
 # Android 
